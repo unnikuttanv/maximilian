@@ -1,0 +1,76 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #007bff;
+}
+
+header {
+    background: url('/home/unni/Music/header-bg.jpg') no-repeat center center/cover;
+    color: #f700ff;
+    padding: 100px 0; /* Increased padding */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ff7f00;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    /* Optional: Add a background color with some opacity to make the text easier to read on top of your background images */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#about {
+    /*background: url('/home/unni/Music/about-bg.jpg') no-repeat center center/cover;
+}
+
+#services {
+    background: url('/home/unni/Music/services-bg.jpg') no-repeat center center/cover;
+}
+
+#portfolio {
+    /* If you have an image for the portfolio section, uncomment and update this line */
+    /* background: url('images/portfolio-bg.jpg') no-repeat center center/cover; */
+}
+
+#contact {
+    /*background: url('/home/unni/Music/contact-bg.jpg') no-repeat center center/cover;
+}*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Changed from fixed to relative */
+    width: 100%;
+}
+
+/* Enhancements */
+h1, h2 {
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 20px;
+}
