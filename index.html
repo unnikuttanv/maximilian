@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maximilian</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .social-media-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-media-icons a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000; /* Color of the text */
+            font-family: Arial, sans-serif; /* Adjust as needed */
+        }
+        .social-media-icons img {
+            width: 24px; /* Smaller icon size */
+            height: auto;
+            margin-right: 8px; /* Space between icon and text */
+        }
+    </style>
 </head>
 <body>
     <header class="background-transparent">
-        <h1>Maximilian Design Studio</h1>
         <nav>
             <ul>
                 <li><a href="#about" class="bright-text">About Us</a></li>
@@ -17,6 +34,7 @@
                 <li><a href="#contact" class="bright-text">Contact</a></li>
             </ul>
         </nav>
+        <h1>Maximilian Design Studio</h1>
     </header>
     <section id="about" style="background-image: url(./about-bg.jpg);">
         <div class="content">
@@ -39,11 +57,16 @@
     <section id="contact" style="background-image: url(./contact-bg.jpg);">
         <div class="content">>
             <h2>Contact Us</h2>
-            <p>Have a design in mind?</p>
-            <p>Come to Kaloor Pipeline road to our office</p>
-            <p>Connect on whatsapp +91-8113883998</p>
-            <p>Email us: maximilianm4m@gmail.com</p>
+            <p class="compact">Have a design in mind?</p>
+            <p class="compact">Come to Kaloor Pipeline road to our office</p>
+            <p class="compact">Connect on whatsapp +91-8113883998</p>
+            <p class="compact">Email us: maximilianm4m@gmail.com</p>
         <div>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/maxi_miliann_/" target="_blank">
+                <img src="./insta.jpg" alt="Instagram"><span class="insta-text">We are on Instagram
+            </a>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Maximilian Design Studio. All rights reserved.</p>

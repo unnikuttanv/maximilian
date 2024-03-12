@@ -34,13 +34,34 @@ body {
 header {
     background: url('./header-bg.jpg') no-repeat center center/cover;
     color: #ffffff;
-    padding: 100px 0; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    font-weight: bold;
+    padding: 20px; /* Increased padding */
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav {
+    flex: 1;
+    text-align: right; 
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li {
@@ -51,7 +72,6 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
 }
 
 section {
@@ -88,10 +108,18 @@ footer {
 }
 
 /* Enhancements */
-h1, h2 {
+h1 {
+    margin-top: 20px;
     font-weight: 300;
 }
 
 p {
     margin-bottom: 20px;
+}
+p.compact{
+    margin: 3px 0;
+    padding: 0;
+}
+.insta-text{
+    color: #C13584;
 }
