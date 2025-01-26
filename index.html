@@ -2,75 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maximilian</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .social-media-icons {
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        header {
             text-align: center;
-            margin-top: 20px;
+            background: url('https://source.unsplash.com/1600x600/?fashion') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            position: relative;
         }
-        .social-media-icons a {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: #000; /* Color of the text */
-            font-family: Arial, sans-serif; /* Adjust as needed */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
         }
-        .social-media-icons img {
-            width: 24px; /* Smaller icon size */
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .item {
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
             height: auto;
-            margin-right: 8px; /* Space between icon and text */
+            border-radius: 8px;
+        }
+        .collection {
+            background: url('https://source.unsplash.com/1600x600/?fashion-model') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            margin: 40px 0;
+        }
+        .collection::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .collection h2, .collection a {
+            position: relative;
+            z-index: 1;
+        }
+        footer {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+        footer .footer-links div {
+            flex: 1;
         }
     </style>
 </head>
 <body>
-    <header class="background-transparent">
-        <nav>
-            <ul>
-                <li><a href="#about" class="bright-text">About Us</a></li>
-                <li><a href="#services" class="bright-text">Services</a></li>
-                <li><a href="#portfolio" class="bright-text">Portfolio</a></li>
-                <li><a href="#contact" class="bright-text">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Maximilian Design Studio</h1>
+    <header>
+        <h1>MAXIMILIAN</h1>
+        <p>Timeless Elegance</p>
     </header>
-    <section id="about" style="background-image: url(./about-bg.jpg);">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>We are a creative design studio passionate about design and innovation.</p>
-        <div>
-    </section>
-    <section id="services" style="background-image: url(./services-bg.jpg);">
-        <div class="content">
-            <h2>Our Services</h2>
-            <p>We offer a wide range of design services to transform your ideas into reality.</p>
-        <div>
-    </section>
-    <section id="portfolio" style="background-image: url(./portfolio-bg.jpg);">
-        <div class="content">
-            <h2>Our Portfolio</h2>
-            <p>Check out our previous projects to see our expertise in action.</p>
-        <div>
-    </section>
-    <section id="contact" style="background-image: url(./contact-bg.jpg);">
-        <div class="content">>
-            <h2>Contact Us</h2>
-            <p class="compact">Have a design in mind?</p>
-            <p class="compact">Come to Kaloor Pipeline road to our office</p>
-            <p class="compact">Connect on whatsapp +91-8113883998</p>
-            <p class="compact">Email us: maximilianm4m@gmail.com</p>
-        <div>
-        <div class="social-media-icons">
-            <a href="https://www.instagram.com/maxi_miliann_/" target="_blank">
-                <img src="./insta.jpg" alt="Instagram"><span class="insta-text">We are on Instagram
-            </a>
-        </div>
-    </section>
+    <nav class="container-fluid">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="new-arrivals">
+            <h2>New Arrivals</h2>
+            <div class="grid-section">
+                <div class="item">
+                    <img src="images/product1.jpg" alt="Product 1">
+                    <p>Brown Long Blouse</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/product2.jpg" alt="Product 2">
+                    <p>Grey Check Long Coat</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/product3.jpg" alt="Product 3">
+                    <p>White Casual Suit</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/product4.jpg" alt="Product 4">
+                    <p>Beige Sweater</p>
+                    <p>NT$1299</p>
+                </div>
+            </div>
+        </section>
+        <section id="collection" class="collection">
+            <h2>Collection</h2>
+            <a href="#" class="button">View</a>
+        </section>
+        <section id="features">
+            <h2>Featured Items</h2>
+            <div class="grid-section">
+                <div class="item">
+                    <img src="images/feature1.jpg" alt="Feature 1">
+                    <p>Twice as Cozy</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/feature2.jpg" alt="Feature 2">
+                    <p>Shop the Latest Trends</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/feature3.jpg" alt="Feature 3">
+                    <p>Seasonal Special</p>
+                    <p>NT$1299</p>
+                </div>
+                <div class="item">
+                    <img src="images/feature4.jpg" alt="Feature 4">
+                    <p>Comfort Redefined</p>
+                    <p>NT$1299</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Maximilian Design Studio. All rights reserved.</p>
+        <div class="footer-links">
+            <div>
+                <h3>About Us</h3>
+                <p>Our Story</p>
+                <p>Our Spirit</p>
+                <p>Our Members</p>
+            </div>
+            <div>
+                <h3>Customer Service</h3>
+                <p>Contact Us</p>
+                <p>Delivery Options</p>
+                <p>Payment Methods</p>
+            </div>
+            <div>
+                <h3>Connect Us</h3>
+                <p>Whatsapp +91-8113883998</p>
+                <p>Email: maximilianm4m@gmail.com</p>
+            </div>
+        </div>
+        <small>Privacy Policy | Terms & Conditions | © 2025 MAXIMILIAN</small>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
