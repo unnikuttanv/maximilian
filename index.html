@@ -7,35 +7,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            background-color: #fef8f0;
+            color: #333;
         }
         h1, h2 {
             font-family: 'Playfair Display', serif;
         }
         header {
             text-align: center;
-            background: url('https://source.unsplash.com/1600x600/?fashion') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('https://source.unsplash.com/1600x600/?luxury-fashion') no-repeat center center/cover;
             color: white;
             padding: 100px 20px;
-            position: relative;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+        nav {
+            background-color: #fffcdc;
+            color: #333;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        header h1, header p {
-            position: relative;
-            z-index: 1;
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
         }
         .grid-section {
             display: grid;
@@ -45,47 +44,78 @@
         }
         .item {
             text-align: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
         }
         .item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+        .item:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
         .collection {
-            background: url('https://source.unsplash.com/1600x600/?fashion-model') no-repeat center center/cover;
-            color: white;
+            background: linear-gradient(to right, #fef8f0, #fffcdc);
+            color: #333;
             text-align: center;
-            padding: 100px 20px;
-            position: relative;
+            padding: 80px 20px;
             margin: 40px 0;
+            border-radius: 10px;
         }
-        .collection::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+        .collection a {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
         }
-        .collection h2, .collection a {
-            position: relative;
-            z-index: 1;
+        .collection a:hover {
+            background-color: #d9a7c7;
+            color: #333;
         }
         footer {
-            background: #f4f4f4;
-            padding: 20px;
+            background: #fffcdc;
+            color: #333;
+            padding: 40px 20px;
             margin-top: 40px;
-            text-align: center;
+            border-top: 2px solid #ddd;
         }
-        footer .footer-links {
+        footer .footer-content {
             display: flex;
-            justify-content: space-around;
-            text-align: left;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
         }
-        footer .footer-links div {
+        footer .footer-section {
             flex: 1;
+            min-width: 200px;
+        }
+        footer h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer small {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #666;
         }
     </style>
 </head>
@@ -94,6 +124,7 @@
         <h1>MAXIMILIAN</h1>
         <p>Timeless Elegance</p>
     </header>
+
     <nav class="container-fluid">
         <ul>
             <li><a href="#">Home</a></li>
@@ -102,80 +133,84 @@
             <li><a href="#">Sale</a></li>
         </ul>
     </nav>
+
     <main class="container">
         <section id="new-arrivals">
             <h2>New Arrivals</h2>
             <div class="grid-section">
                 <div class="item">
-                    <img src="images/product1.jpg" alt="Product 1">
+                    <img src="https://source.unsplash.com/400x500/?modern-fashion" alt="Product 1">
                     <p>Brown Long Blouse</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/product2.jpg" alt="Product 2">
+                    <img src="https://source.unsplash.com/400x500/?fashion-dress" alt="Product 2">
                     <p>Grey Check Long Coat</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/product3.jpg" alt="Product 3">
+                    <img src="https://source.unsplash.com/400x500/?fashion-trendy" alt="Product 3">
                     <p>White Casual Suit</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/product4.jpg" alt="Product 4">
+                    <img src="https://source.unsplash.com/400x500/?luxury-fashion" alt="Product 4">
                     <p>Beige Sweater</p>
                     <p>NT$1299</p>
                 </div>
             </div>
         </section>
+
         <section id="collection" class="collection">
             <h2>Collection</h2>
-            <a href="#" class="button">View</a>
+            <a href="#">View More</a>
         </section>
+
         <section id="features">
             <h2>Featured Items</h2>
             <div class="grid-section">
                 <div class="item">
-                    <img src="images/feature1.jpg" alt="Feature 1">
+                    <img src="https://source.unsplash.com/400x500/?fashion" alt="Feature 1">
                     <p>Twice as Cozy</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/feature2.jpg" alt="Feature 2">
+                    <img src="https://source.unsplash.com/400x500/?clothing" alt="Feature 2">
                     <p>Shop the Latest Trends</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/feature3.jpg" alt="Feature 3">
+                    <img src="https://source.unsplash.com/400x500/?modern-clothing" alt="Feature 3">
                     <p>Seasonal Special</p>
                     <p>NT$1299</p>
                 </div>
                 <div class="item">
-                    <img src="images/feature4.jpg" alt="Feature 4">
+                    <img src="https://source.unsplash.com/400x500/?style" alt="Feature 4">
                     <p>Comfort Redefined</p>
                     <p>NT$1299</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <div class="footer-links">
-            <div>
+        <div class="footer-content">
+            <div class="footer-section">
                 <h3>About Us</h3>
-                <p>Our Story</p>
-                <p>Our Spirit</p>
-                <p>Our Members</p>
+                <p>We are a premium fashion retailer specializing in timeless elegance for every occasion.</p>
+                <a href="#">Learn More</a>
             </div>
-            <div>
+            <div class="footer-section">
                 <h3>Customer Service</h3>
-                <p>Contact Us</p>
-                <p>Delivery Options</p>
-                <p>Payment Methods</p>
+                <a href="#">Contact Us</a><br>
+                <a href="#">Delivery Options</a><br>
+                <a href="#">Payment Methods</a>
             </div>
-            <div>
-                <h3>Connect Us</h3>
-                <p>Whatsapp +91-8113883998</p>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
                 <p>Email: maximilianm4m@gmail.com</p>
+                <p>Whatsapp: +91-8113883998</p>
+                <p>Instagram: <a href="https://instagram.com/maxi_miliann_" target="_blank">@maxi_miliann_</a></p>
             </div>
         </div>
         <small>Privacy Policy | Terms & Conditions | © 2025 MAXIMILIAN</small>
